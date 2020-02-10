@@ -1,0 +1,24 @@
+{
+    "name": "lapress/blogfront-collection",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sebastian Szczepanski",
+            "email": "sebastian@ably.pl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LaPress\\BlogFront\\Collection\\": "src/"
+        },
+    },
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaPress\\BlogFront\\Collection\\PackageServiceProvider"ś
+            ]
+        }
+    }
+}

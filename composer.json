@@ -1,0 +1,73 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.2",
+        "elasticsearch/elasticsearch": "^7.6",
+        "fideloper/proxy": "^4.0",
+        "jjgrainger/wp-custom-post-type-class": "^1.4",
+        "johnpbloch/wordpress": "^5.3",
+        "lapress/blogfront": "dev-master",
+        "lapress/image": "0.0.1-alpha-2",
+        "lapress/support": "dev-master",
+        "lapress/database": "dev-master",
+        "lapress/wordpress-routing": "dev-master",
+        "laravel/framework": "^6.2",
+        "laravel/tinker": "^2.0",
+        "predis/predis": "^1.1"
+    },
+    "require-dev": {
+        "facade/ignition": "^1.4",
+        "fzaninotto/faker": "^1.9.1",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^3.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "config": {
+        "vendor-dir": "api/vendor",
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "api/app/",
+            "LaPress\\BlogFront\\Collection\\": "packages/blogfront-collection/src/"
+        },
+        "classmap": [
+            "api/database/seeds",
+            "api/database/factories"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "api/tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "LaPress\\Support\\ComposerScripts::postAutoload",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    }
+}

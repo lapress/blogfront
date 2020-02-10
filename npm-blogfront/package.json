@@ -1,0 +1,19 @@
+{
+  "name": "@lapress/blogfront",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lapress/blogfront-npm.git"
+  },
+  "author": "Sebastian Szczepanski <sebastian@ably.pl> (http://ably.pl)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lapress/blogfront-npm/issues"
+  },
+  "homepage": "https://github.com/lapress/blogfront-npm#readme"
+}
