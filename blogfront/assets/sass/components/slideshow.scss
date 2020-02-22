@@ -1,0 +1,28 @@
+.slideshow {
+    @apply mb-10 relative max-w-full;
+    
+    &__bottom {
+        @apply flex items-center pr-6 absolute left-0 right-0 bottom-0 mb-4;
+    }
+    
+    &__track {
+        @apply p-2 flex items-center mr-4 flex-1;
+
+        background: rgba(0,0,0, .6);
+    }
+
+    &__thumb {
+        @apply block mr-2;
+    }
+    
+    &__counter {
+        @apply text-center flex-1 text-white text-xs uppercase font-bold;
+
+        &-icon {
+            
+        }
+        &-label {
+            @apply block;
+        }
+    }
+}

@@ -1,55 +1,41 @@
 <template>
   <div>
-    <nuxt />
+    <portal-target name="header.before" slim />
+    <Header />
+    <BackToHomePage v-if="!isHomePage" />
+    <portal-target name="header.after" slim />
+    <nuxt v-if="!isMobileMenuOpened" />
+    <portal-target name="footer.before" slim />
+    <Footer />
+    <portal-target name="footer.after" slim />
   </div>
 </template>
+<script>
+import { mapState } from 'vuex'
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 1rem;
-  word-spacing: 0.0625rem;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+import Header from '~/components/blocks/Header/Header.vue'
+import Footer from '~/components/blocks/Footer/Footer.vue'
+const BackToHomePage = () => import(/* webpackChunkName: "lp-back-to-home" */'~/components/atoms/BackToHomePage')
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
+export default {
+  components: {
+    BackToHomePage,
+    Header,
+    Footer
+  },
+  async asyncData () {
+    // primary menu
+    // footer menu
+    // authors menu
+  },
+  computed: {
+    ...mapState('ui', ['isMobileMenuOpened']),
+    isMobileMenuOpened () {
+      return false
+    },
+    isHomePage () {
+      return this.$route.name === 'index'
+    }
+  }
 }
-
-.button--green {
-  display: inline-block;
-  border-radius: 0.25rem;
-  border: 0.0625rem solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 0.75rem 2rem;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 0.25rem;
-  border: 0.0625rem solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 0.75rem 2rem;
-  margin-left: 1rem;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
-</style>
+</script>

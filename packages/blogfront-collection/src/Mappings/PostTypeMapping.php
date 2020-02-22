@@ -73,14 +73,17 @@ class PostTypeMapping implements MappingInterface
                     ],
                 ],
             ],
+            'template'     => [
+                'type' => 'text',
+            ],
             'date'       => [
-                'type'      => 'date',
-                'format'    => 'yyyy-MM-dd HH:mm:ss',
+                'type'   => 'date',
+                'format' => 'yyyy-MM-dd HH:mm:ss',
             ],
             'type'       => [
                 'type' => 'keyword',
             ],
-//            'meta' => []
+            //            'meta' => []
         ];
     }
 

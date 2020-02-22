@@ -63,7 +63,7 @@ class IndexDocumentsCommand extends BaseCommand
 
         $resource->chunk(100, function ($chunk) use ($bar, $key){
             foreach($chunk as $item) {
-                SaveCollectionDocumentJob::dispatchNow($key, $item);
+                SaveCollectionDocumentJob::dispatch($key, $item);
                 $bar->advance();
             }
         });

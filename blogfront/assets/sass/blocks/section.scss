@@ -1,0 +1,17 @@
+.section {
+  @apply py-medium;
+}
+
+.p-section-1-4 {
+  &__posts {
+    display: grid;
+    grid-gap: 4px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 12rem);
+    margin-bottom: 2rem;
+  }
+  &__post-1 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}

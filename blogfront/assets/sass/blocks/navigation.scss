@@ -1,0 +1,38 @@
+.nav {
+  @screen md {
+    @apply self-stretch flex-1 items-stretch flex;
+  }
+
+  &-list {
+    @apply flex items-stretch self-stretch;
+
+    &__item {
+      @apply relative flex items-stretch;
+    }
+  }
+
+  &-item {
+    @apply text-white px-4 font-semibold inline-flex items-center;
+
+    @screen md {
+      @apply self-center;
+    }
+  }
+}
+.submenu {
+  @apply absolute bg-white p-6 shadow-lg z-20;
+
+  top: 100%;
+
+  &:before {
+    @apply bg-primary left-0 absolute;
+
+    content: "";
+    height: 4px;
+    top: -4px;
+    width: 5rem;
+  }
+}
+.s-nav-item {
+  @apply text-secondary font-semibold text-xl block py-2 px-8;
+}

@@ -1,0 +1,53 @@
+$gridColumns: 12;
+$gridColumnWidth: 4.25rem;
+$gridColumnGap: 1.5rem;
+
+
+.container {
+  @apply mx-auto px-4 max-w-full;
+
+  @screen xl {
+    width: theme('sizes.container.large')
+  }
+
+  @screen hd {
+    width: theme('sizes.container.default')
+  }
+}
+
+.row {
+  @apply flex relative;
+
+  @screen mobile {
+    @apply block;
+  }
+
+  @screen sm {
+    margin: 0 -#{$gridColumnGap / 2}
+  }
+}
+
+@for $i from 0 to $gridColumns {
+  .col-#{$i} {
+
+    width: 100%;
+
+    @screen sm {
+      margin: 0 $gridColumnGap / 2;
+      width: $i * $gridColumnWidth + ($i - 1) * $gridColumnGap;
+      max-width: 100%;
+    }
+
+  }
+  .offset-#{$i} {
+    @screen sm {
+      margin-left: $i * $gridColumnWidth + $i * $gridColumnGap;
+    }
+  }
+}
+
+.grid + .grid {
+  @screen sm {
+    margin-top: -3.125rem;
+  }
+}

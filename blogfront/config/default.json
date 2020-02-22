@@ -1,0 +1,69 @@
+{
+  "baseUrl": "",
+  "elasticsearch": {
+    "host": "http://lapress-app.test/api/collection",
+    "indexes": [
+      "post",
+      "taxonomy"
+    ],
+    "defaultIndex": "post"
+  },
+  "meta": {
+    "title": "",
+    "titleTemplate": "",
+    "description": "",
+    "keywords": "",
+    "manifest": {
+      "name": "Antyweb",
+      "short_name": "Antyweb",
+      "lang": "pl",
+      "description": "Antyweb to blog o technologiach takich jak smartfony, komputery czy internet. Odwiedź też nasz kanał na YouTube! Dodaj nas do RSS!",
+      "theme_color": "#101111"
+    },
+    "socials": {
+      "title": "",
+      "facebook": {
+        "image": "/facebook.jpg"
+      },
+      "twitter": {
+        "site": ""
+      }
+    }
+  },
+  "seo": {
+    "redirections": {
+      "/antywebtv": "/category/antywebtv/"
+    },
+    "routes": {
+      "post": "/:urlKey",
+      "author": "/author/:slug",
+      "category": "/category/:slug",
+      "tag": "/tag/:slug",
+      "taxonomy": "/:taxonomy/:slug"
+    }
+  },
+  "socials": {
+    "facebookUrl": "sfsd",
+    "instagramUrl": null,
+    "twitterUrl": null,
+    "youtubeUrl": null
+  },
+  "ui": {
+    "loadingColor": "#1eaffc"
+  },
+  "menus": {
+    "primary": {}
+  },
+  "list": {
+    "perPage": 20
+  },
+  "entities": {
+
+    "author": {
+      "data": {}
+    }
+  },
+  "images": {
+    "sizes": {}
+  }
+}

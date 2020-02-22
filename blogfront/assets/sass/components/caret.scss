@@ -1,0 +1,11 @@
+.caret {
+  @apply block ml-4;
+
+  border-style: solid;
+  border-width: 4px 4px 0;
+  border-color: theme('colors.primary') transparent transparent;
+
+  &--white {
+    border-color: theme('colors.white') transparent transparent;
+  }
+}

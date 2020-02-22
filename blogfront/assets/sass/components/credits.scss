@@ -1,0 +1,23 @@
+.credits {
+    @apply mt-auto;
+
+    @screen mobile {
+        @apply mt-8;
+    }
+    
+    &__line {
+        @apply flex items-center leading-loose;
+
+        @screen mobile {
+            @apply justify-center;
+        }
+    }
+    
+    &__pref{
+        @apply mr-2;
+    }
+
+    &__link {
+        @apply flex items-center;
+    }
+}

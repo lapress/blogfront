@@ -14,11 +14,11 @@ use Illuminate\Http\Request;
 */
 Route::prefix('collection')->namespace('Collection')->group(function (){
     // api/collection/post/_search
-    Route::get('post/_search', 'PostSearchController@index');
-    Route::get('post/{type}/_search', 'PostSearchController@show');
-    Route::get('category/_search', 'CategorySearchController@index');
-    Route::get('tag/_search', 'TagSearchController@index');
-    Route::get('taxonomy/{type}/_search', 'TaxonomySearchController@show');
+    Route::match(['get', 'post', 'options'], 'post/_search', 'PostSearchController@index');
+    Route::match(['get', 'post', 'options'],'post/{type}/_search', 'PostSearchController@show');
+    Route::match(['get', 'post', 'options'],'category/_search', 'CategorySearchController@index');
+    Route::match(['get', 'post', 'options'],'tag/_search', 'TagSearchController@index');
+    Route::match(['get', 'post', 'options'], 'taxonomy/{type}/_search', 'TaxonomySearchController@show');
 });
 // pages/homepage
 // api/collection

@@ -34,7 +34,6 @@ class SaveCollectionDocumentJob implements ShouldQueue
     {
         $this->type = $type;
         $this->model = $model;
-        $this->collectionService = app(ElasticSearchCollectionService::class);
     }
 
     /**
@@ -44,6 +43,7 @@ class SaveCollectionDocumentJob implements ShouldQueue
      */
     public function handle()
     {
+        $this->collectionService = app(ElasticSearchCollectionService::class);
         if (!$this->model->isPublished()) {
             try{
                 $this->collectionService->delete($this->type, $this->model);

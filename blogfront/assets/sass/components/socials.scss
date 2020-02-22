@@ -1,0 +1,32 @@
+.socials {
+    @apply flex items-center;
+}
+
+.header__socials {
+    @apply hidden;
+    
+    @screen sm {
+        @apply flex;
+    }
+}
+
+.footer__socials {
+    @screen mobile {
+        @apply absolute top-0 mt-20;
+    }    
+}
+
+.social-icon {
+    @apply flex items-center justify-center rounded-full border border-white border-solid text-white mx-3;
+
+    height: theme('sizes.social');
+    width: theme('sizes.social');
+    
+    &--black {
+        @apply text-black ml-4 mr-0;
+        
+        &:hover {
+            @apply bg-black text-white border-black;
+        }
+    }
+}

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "55d4d38606b2309e4e6dcd34f4edb8f9",
+    "content-hash": "8c8cd570703b9a03ab2d6a5673fef499",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -6194,8 +6194,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "lapress/blogfront": 20,
-        "lapress/support": 20,
         "lapress/database": 20,
+        "lapress/support": 20,
         "lapress/wordpress-routing": 20
     },
     "prefer-stable": true,

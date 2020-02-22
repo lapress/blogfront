@@ -1,0 +1,15 @@
+.l-dark {
+    @apply bg-black;
+
+    min-height: 100vh;
+}
+
+.page {
+    &--narrow {
+        @apply py-6;
+    }
+}
+
+.aside {
+    padding: 0 theme('sizes.minimalLayout.asidePadding')
+}

@@ -1,0 +1,32 @@
+.p-item {
+    @apply mb-6;
+
+    @screen md {
+        @apply flex items-center;
+    }
+
+    &__figure {
+        @apply relative flex-none;
+
+        @screen mobile {
+            @apply mb-4;
+        }
+        
+        &-img {
+            @apply block;
+        }
+    }
+    &__badge {
+        @apply absolute top-0 left-0;
+    }
+    
+    &__inner {
+        @screen md {
+            @apply bg-white my-4 relative -ml-10 p-4 flex flex-col justify-center self-stretch;
+        }
+    }
+    
+    &__counter {
+        @apply absolute left-0 bottom-0;
+    }
+}

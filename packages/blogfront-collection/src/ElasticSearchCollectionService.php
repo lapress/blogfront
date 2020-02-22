@@ -76,7 +76,6 @@ class ElasticSearchCollectionService
                     ],
                 ]);
             } catch (\Exception $e) {
-
             }
         }
     }
@@ -105,7 +104,7 @@ class ElasticSearchCollectionService
         try {
             $this->deleteIndex($index);
         } catch (\Exception $e) {
-
+            dump($e);die();
         }
 
         $this->createIndex($resource, $mappings);
@@ -163,13 +162,16 @@ class ElasticSearchCollectionService
      * @param string $resource
      * @return array
      */
-    public function search(string $resource)
+    public function search(string $resource, $body = [])
     {
         $index = $this->getIndexName($resource);
+
+//        dump($query);die();
 
         return $this->elasticsearch->search([
             'index' => $index,
             'type'  => $index,
+            'body' => $body
         ]);
     }
 }

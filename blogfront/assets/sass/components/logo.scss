@@ -1,0 +1,12 @@
+.logo {
+    @apply inline-flex items-center;
+
+    @screen mobile {
+        @apply px-2;
+    }
+}
+.footer__logo {
+    @screen mobile {
+        @apply mb-24;
+    }
+}

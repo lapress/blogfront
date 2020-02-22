@@ -1,0 +1,6 @@
+export const ADD_MENU = 'ui/ADD_MENU'
+export const SET_LOADING = 'ui/SET_LOADING'
+export const SET_OPTIONS = 'ui/SET_OPTIONS'
+export const TOGGLE_SEARCH_FORM = 'ui/TOGGLE_SEARCH_FORM'
+export const TOGGLE_MOBILE_MENU = 'ui/TOGGLE_MOBILE_MENU'
+export const SET_HEADER_TRANSPARENT = 'ui/SET_HEADER_TRANSPARENT'

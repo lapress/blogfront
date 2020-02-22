@@ -1,0 +1,35 @@
+body {
+  overflow-x: hidden;
+}
+
+.fill-current {
+  fill: currentColor;
+}
+
+button,
+textarea,
+input {
+  &:focus,
+  &:active {
+    outline: none
+  }
+}
+
+a {
+  @apply no-underline text-primary;
+
+  transition: all .3s ease;
+}
+
+img {
+  max-width: 100%;
+}
+
+.m\:hidden {
+  @media screen and (max-width: 756px) {
+    @apply hidden;
+  }
+}
+.invisible {
+  visibility: hidden;
+}

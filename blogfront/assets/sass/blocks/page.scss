@@ -1,0 +1,23 @@
+.page {
+    @apply py-10;
+
+    &__content {
+        @apply mx-auto;
+        max-width: 100%;
+        width: 33rem;
+
+        p {
+            @apply mb-10;
+            line-height: 26px;
+        }
+
+        strong,
+        b {
+            @apply font-semibold;
+        }
+    }
+
+    &--ntp {
+        @apply pt-0;
+    }
+}

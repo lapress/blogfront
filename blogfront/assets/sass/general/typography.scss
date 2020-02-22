@@ -1,0 +1,17 @@
+body {
+    @apply font-sans text-black text-base;
+
+    text-rendering: optimizeLegibility;
+    font-smooth: always;
+    font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+.title-1 {
+    @apply text-5xl leading-tight font-semibold;
+}
+
+.title-row {
+    @apply mb-10;
+}

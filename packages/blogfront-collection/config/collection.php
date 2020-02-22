@@ -6,11 +6,12 @@ return [
     'requestCache' => true,
     'indexes' => [
         'post' => [
-            \LaPress\Database\ModelResolver::resolve('Post')
+            \LaPress\Database\ModelResolver::resolve('Post'),
+            \LaPress\Database\ModelResolver::resolve('Page')
         ],
         'taxonomy' => [
-            \LaPress\Database\ModelResolver::resolve('Category'),
-            \LaPress\Database\ModelResolver::resolve('PostTag'),
+//            \LaPress\Database\ModelResolver::resolve('Category'),
+//            \LaPress\Database\ModelResolver::resolve('PostTag'),
         ]
     ],
     'mappings' => [
